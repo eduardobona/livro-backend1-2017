@@ -21,4 +21,36 @@ function validar_curriculo($dados) {
   }
 }
 
+function validar_curriculo_arquivos($arquivos) {
+  if (isset($arquivos['foto'])) {
+    if ($arquivos['foto']['error']!=0) {
+      return false;
+    }
+    if (in_array($arquivos['foto']['type'], array(
+      'image/jpeg', 'image/png'
+    ))){
+      return true;
+    }else{
+      return false;
+    }
+  } else {
+    return false;
+  }        
+  if (isset($arquivos['curriculo'])) {
+    if ($arquivos['foto']['error']!=0) {
+      return false;
+    }
+    if (in_array($arquivos['curriculo']['type'], array(
+      'application/msword', 'application/pdf'
+    ))){
+      return true;
+    }else{
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+
+
 ?>
