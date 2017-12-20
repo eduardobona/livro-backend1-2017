@@ -1,5 +1,4 @@
 <?php
-  include 'layout/cabecalho.php';
   include 'funcoes/validadores.php';
 
   $empresa = (int) $_GET['codigo'];
@@ -7,10 +6,12 @@
     header('location: index.php?erro=erro');
     exit();
   }
+
+  include 'layout/cabecalho.php';
 ?>
         <div class="formulario-curriculo">
           <h3>Envie seu currículo com foto:</h3>
-          <form action="enviar_curriculo.php" method="post">
+          <form action="enviar_curriculo.php" method="post" ecntype="multipart/form-data">
             <label>Nome:</label>
             <input type="text" name="nome" /><br />
             <label>Email:</label>
