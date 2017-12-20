@@ -1,6 +1,6 @@
 <?php
 
-function agradecer_email ($nome, $email) {
+function agradecer_contato ($nome, $email) {
   $assunto = "GB: Agradecemos seu cadastro";
   $mensagem = "
     Olá, este email está sendo enviado para
