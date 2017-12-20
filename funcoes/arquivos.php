@@ -7,11 +7,19 @@ function mover_arquivo($arquivo, $tipo) {
   $extensao = $pathinfo['extension'];
   $pasta = 'curriculos';
   $novo_nome_completo = $pasta . '/' . $novo_nome . '.' . $extensao;    
+  
+  if (! file_exists(__DIR__ . '/../' . $pasta)) {
+    mkdir($pasta, '0777');
+  }
+  
   // movendo arquivo temporário para destino final
-  move_uploaded_file(
+  if(! move_uploaded_file(
     $arquivo['tmp_name'],
     __DIR__ . '/../' . $novo_nome_completo
-  );    
+  )) {
+    return false;
+  }
+  
   return $novo_nome_completo;
 }
 ?>
