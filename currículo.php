@@ -1,6 +1,12 @@
 <?php
   include 'layout/cabecalho.php';
-  $empresa = $_GET['codigo'];
+  include 'funcoes/validadores.php';
+
+  $empresa = (int) $_GET['codigo'];
+  if (validar_empresa($empresa) == false) {
+    header('location: index.php?erro=erro');
+    exit();
+  }
 ?>
         <div class="formulario-curriculo">
           <h3>Envie seu currículo com foto:</h3>
