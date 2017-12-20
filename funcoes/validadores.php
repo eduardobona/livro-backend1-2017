@@ -5,7 +5,7 @@ function validar_empresa($codigo){
     if (isset ($empresa_departamento[$codigo])) {
         return true;
     } else {
-        return false;
+        return 'Código da empresa não foi encontrado';
     }
 }
 
@@ -14,43 +14,42 @@ function validar_curriculo($dados) {
     if( ! empty($dados['nome']) and ! empty($dados['email']) ){
       return true;
     } else {
-      return false;
+      return 'O preenchimento de nome e email é obrigatório';
     }
   } else {
-    return false;
+    return 'O preenchimento de nome e email é obrigatório';
   }
 }
 
 function validar_curriculo_arquivos($arquivos) {
+  
   if (isset($arquivos['foto'])) {
     if ($arquivos['foto']['error']!=0) {
-      return false;
+      return "Houve um erro no envio da foto pelo formulário";
     }
-    if (in_array($arquivos['foto']['type'], array(
+    if (! in_array($arquivos['foto']['type'], array(
       'image/jpeg', 'image/png'
     ))){
-      return true;
-    }else{
-      return false;
+      return "A foto enviada deve ser compatível com image/jpeg ou image/png";
     }
   } else {
-    return false;
+    return "O envio da foto (anexo) é obrigatória";
   }        
+  
   if (isset($arquivos['curriculo'])) {
-    if ($arquivos['foto']['error']!=0) {
-      return false;
+    if ($arquivos['foto']['error'] != 0) {
+      return "Houve um erro no envio do currículo pelo formulário";
     }
-    if (in_array($arquivos['curriculo']['type'], array(
+    if (! in_array($arquivos['curriculo']['type'], array(
       'application/msword', 'application/pdf'
     ))){
-      return true;
-    }else{
-      return false;
+      return "O currículo enviado deve ser compatível com applicarion/msword e application/pdf";
     }
   } else {
-    return false;
+    return "O envio do currículo (anexo) é obrigatório";
   }
+  
+  return true;
 }
-
 
 ?>
