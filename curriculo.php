@@ -12,9 +12,9 @@
           <h3>Envie seu currículo com foto:</h3>
           <form action="enviar_curriculo.php" method="post">
             <label>Nome:</label>
-            <input type="text" name="nome" />
+            <input type="text" name="nome" /><br />
             <label>Email:</label>
-            <input type="email" name="email" />
+            <input type="email" name="email" /><br />
             <label>Departamento:</label>
             <select name="departamento">
 <?php
@@ -28,12 +28,12 @@
 <?php
   }
 ?>
-            </select>
+            </select><br />
             <label>Foto:</label>
-            <input type="file" name="foto" />
+            <input type="file" name="foto" /><br />
             <label>Curriculo:</label>
-            <input type="file" name="curriculo" />
-            <input type="hidden" name="empresa" value="<?php echo $empresa?>" />        
+            <input type="file" name="curriculo" /><br />
+            <input type="hidden" name="empresa" value="<?php echo $empresa?>" /><br /><br />     
             <input type="submit" value="Enviar" />
           </form>
         </div>
