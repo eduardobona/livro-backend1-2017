@@ -10,8 +10,13 @@
   include 'layout/cabecalho.php';
 ?>
         <div class="formulario-curriculo">
+         
+<?php
+  include 'layout/mensagem.php';
+?>
+         
           <h3>Envie seu currículo com foto:</h3>
-          <form action="enviar_curriculo.php" method="post" ecntype="multipart/form-data">
+          <form action="enviar_curriculo.php" method="post" enctype="multipart/form-data">
             <label>Nome:</label>
             <input type="text" name="nome" /><br />
             <label>Email:</label>
