@@ -2,7 +2,7 @@
   $dados = $_POST;
   include 'funcoes/validadores.php';
   if (validar_curriculo($dados) == false) {
-    header('location: curriculo.php?codigo=' .
+    header('location: curriculo.php?erro=erro&codigo=' .
 $dados['empresa']);
     exit();
   }
