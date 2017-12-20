@@ -11,7 +11,7 @@ function validar_empresa($codigo){
 
 function validar_curriculo($dados) {
   if( isset($dados['nome']) and isset($dados['email']) ) {
-    if( empty($dados['nome']) and empty($dados['email']) ){
+    if( ! empty($dados['nome']) and ! empty($dados['email']) ){
       return true;
     } else {
       return false;
