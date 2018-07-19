@@ -39,7 +39,7 @@
             <input type="file" name="foto" /><br />
             <label>Curriculo:</label>
             <input type="file" name="curriculo" /><br />
-            <input type="hidden" name="empresa" value="<?php echo $empresa?>" /><br /><br />     
+            <input type="hidden" name="empresa" value="<?php echo $empresa?>" /> 
             <input type="submit" value="Enviar" />
           </form>
         </div>
