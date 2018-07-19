@@ -1,0 +1,47 @@
+html{
+	background-color: #fefefe;
+	font-family: tahoma, arial, sans-serif, times;
+}
+
+/**
+ * HOME
+ */
+.central{
+	background-color: #ffffff;
+	padding: 20px;
+	width:500px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+.central .lista-empresas li{
+	background-color: #eee;
+	list-style-type: none;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.central .lista-empresas li a{
+	color: #000;
+	text-decoration: none
+}
+.central .lista-empresas li a:hover{
+	color: #333;
+	text-decoration:underline
+}
+
+/**
+ * FORM
+ */
+form label{
+	display:block;
+	padding: 5px
+}
+
+form input, form select{
+	display:block;
+	padding: 5px;
+	width: 480px
+}
+form select{
+	width: 500px
+}
+
