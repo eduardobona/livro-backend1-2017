@@ -22,4 +22,3 @@ function mover_arquivo($arquivo, $tipo) {
   
   return $novo_nome_completo;
 }
-?>

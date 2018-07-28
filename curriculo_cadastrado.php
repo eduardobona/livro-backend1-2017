@@ -7,4 +7,3 @@
 
 <?php
   include 'layout/rodape.php';
-?>

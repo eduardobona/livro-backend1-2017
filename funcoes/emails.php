@@ -31,5 +31,3 @@ function enviar_curriculo_email ($dados, $arquivos) {
 
   return mail($destinatario, $assunto, $mensagem, $headers);
 }
-
-?>

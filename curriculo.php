@@ -45,4 +45,3 @@
         </div>
 <?php
   include 'layout/rodape.php';
-?>

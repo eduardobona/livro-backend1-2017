@@ -51,5 +51,3 @@ function validar_curriculo_arquivos($arquivos) {
   
   return true;
 }
-
-?>

@@ -55,4 +55,3 @@
   header('location: curriculo_cadastrado.php');
   exit();
 
-?>

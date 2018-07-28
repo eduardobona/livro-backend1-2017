@@ -18,4 +18,3 @@ if ($mensagem and $tipo) {
     
     echo $html;
 }
-?>
