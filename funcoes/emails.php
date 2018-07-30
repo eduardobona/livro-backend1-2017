@@ -19,8 +19,8 @@ function enviar_curriculo_email ($dados, $arquivos) {
   ";
   $mensagem = sprintf($mensagem, $dados['nome'], $dados['email']);
   $mensagem .= "
-    Foto: <a href='http://localhost/livro-backend1-2017/%s'>Ver Foto</a><br />
-    Currículo: <a href='http://localhost/livro-backend1-2017/%s'>Ver Currículo</a>
+    Foto: <a href='http://localhost/%s'>Ver Foto</a><br />
+    Currículo: <a href='http://localhost/%s'>Ver Currículo</a>
   ";
   $mensagem = sprintf($mensagem, $arquivos['foto'], $arquivos['curriculo']);
   
