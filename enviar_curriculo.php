@@ -48,11 +48,10 @@
   include 'funcoes/emails.php';
   agradecer_contato($nome, $email);
   enviar_curriculo_email(
-    array('nome' => $nome, 'email' => $email),
+    array('nome' => $nome, 'email' => $email, 'cod_departamento' => $cod_departamento, 'cod_empresa' => $cod_empresa),
     array('foto' => $foto, 'curriculo' => $curriculo)
   );
 
   header('location: curriculo_cadastrado.php');
   exit();
 
-?>

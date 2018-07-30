@@ -45,3 +45,13 @@ form select{
 	width: 500px
 }
 
+/**
+*  LINK
+*/
+.link {
+    text-decoration: none;
+    color: blue;
+}
+.link:hover {
+    color: darkblue;
+}
